@@ -1,0 +1,105 @@
+.pagebody {
+	padding: 0 30px;
+	text-align: center;
+}
+h1 {
+	font-size: 22pt;
+}
+.question,p{
+	text-align: left;
+}
+.back-button{
+    	text-align: center;
+}
+.back-btn {
+    border-radius: 100px;
+    display: block;
+    width: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #6fa1ff;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+.home-btn {
+    border-radius: 100px;
+    display: block;
+    width: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #6fa1ff;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+    margin-left: auto;
+}
+.yes-btn {
+	width: 100px;
+	margin: 10px 5px;
+    background-color: #000080;
+}
+.no-btn {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40%;
+	width: 75px;
+    background-color: #000080;
+}
+.retry-btn{
+    font-weight: bold;
+	width: 50%;
+    padding: 3px;
+    background-color: #000080;
+}
+.retry2-btn{
+    font-weight: bold;
+    text-align: center;
+    font-size: 100%;
+    padding: 15px;
+	width: 80%;
+	margin: 10px;
+    background-color: #000080;
+}
+.area_flexbox{
+    padding: 0px;
+}
+.list{
+    justify-content: space-between;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    border: none;
+    padding: 0px;
+    margin: 0 auto;
+}
+.list li{
+    padding: 10px;
+}
+.list li{
+    padding: 10px;
+}
+.menu-btn {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40%;
+	width: 75px;
+    background-color: #000080;
+}
+.allergen-btn {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40%;
+	width: 75px;
+    background-color: #000080;
+}
+.haram-btn {
+    padding: 80px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 85%;
+	width: 130px;
+    background-color: #000080;
+}

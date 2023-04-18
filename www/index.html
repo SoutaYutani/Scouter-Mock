@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<script>
+
+
+            // 写真を撮る
+        function takePicture() {
+            var options = {
+                sourceType: Camera.PictureSourceType.CAMERA,   // 撮影モード
+                saveToPhotoAlbum: true,   // 撮影後、写真を端末に保存
+                destinationType : Camera.DestinationType.DATA_URL, 
+                quality :30, 
+            };
+            // カメラを起動
+            navigator.camera.getPicture(onSuccess, onError, options);
+            // 撮影完了したときに呼び出される
+            function onSuccess(DATA_URL){
+                document.getElementById('navi').pushPage('loading.html');
+                window.setTimeout(function(){document.getElementById('navi').pushPage('information.html');}, 2000);
+                
+            }
+            // 撮影キャンセルしたときに呼び出される
+            function onError(message){
+                alert('商品を撮影してください。');
+            }
+        } 
+//成功したランダム表示（重複あり）
+        function doreka(){
+     var a = Math.random() * 3;
+     var n = Math.floor( a ) +1;
+     var koreni = "images/menu"+n+".png";
+     document.getElementById("area1").src = koreni;
+   }
+ //成功したランダム表示終了
+
+        function sample(){
+    menu = new Array();
+    menu[1] = "1.html";
+    menu[2] = "2.html";
+    menu[3] = "3.html";
+    n = Math.floor(Math.random()*4);
+    document.getElementById('navi').pushPage(''+[n]+'.html');
+    }
+
+</script>
+
+<body>
+    
+    <ons-navigator page="camera.html" id="navi">
+    </ons-navigator>
+
+</body>
+</html>
